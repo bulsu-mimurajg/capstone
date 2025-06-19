@@ -16,8 +16,8 @@
 
     <nav class="space-x-7 text-[#666666]">
         <x-nav-link href="">About Us</x-nav-link>
-        <x-nav-link>Contact Us</x-nav-link>
-        <x-nav-link>Login</x-nav-link>
+        <x-nav-link href="">Contact Us</x-nav-link>
+        <x-nav-link href="/login">Login</x-nav-link>
     </nav>
 </header>
 
