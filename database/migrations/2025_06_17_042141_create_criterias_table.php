@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('criteria', function (Blueprint $table) {
+        Schema::create('criterias', function (Blueprint $table) {
             $table->foreignIdFor(HTE::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(Competency::class)->constrained()->cascadeOnDelete();
             $table->unsignedTinyInteger('weight');
