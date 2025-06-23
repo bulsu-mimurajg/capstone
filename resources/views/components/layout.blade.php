@@ -12,26 +12,28 @@
 <div class="min-h-full">
     <nav class="flex justify-between items-center px-10 py-5 border-b-[2px]">
         <div>
-            <span class="font-bold text-[20px] text-[#FF9D41]">InternConnect</span>
+            <a href="/">
+                <span class="font-bold text-[20px] text-[#FF9D41]">InternConnect</span>
+            </a>
         </div>
 
         <div class="space-x-7 text-[#666666]">
-            <x-nav-link>About Us</x-nav-link>
-            <x-nav-link>Contact Us</x-nav-link>
-            <x-nav-link>Login</x-nav-link>
+            <x-nav-link href="/about">About Us</x-nav-link>
+            <x-nav-link href="/contact">Contact Us</x-nav-link>
+            <x-nav-link href="/login">Login</x-nav-link>
         </div>
     </nav>
 
     <header>
-{{--        <div class="md:w-1/2 space-y-3">--}}
-{{--            <h1 class="font-bold text-[70px] text-[#666666]">{{ $heading }}</h1>--}}
+        <div class="md:w-1/2 space-y-3">
+            <h1 class="font-bold text-[70px] text-[#666666]">{{ $heading }}</h1>
 {{--            <p class=" text-[#666666]">--}}
 {{--                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dicta--}}
 {{--                tempora optio magnam? Maiores distinctio ea praesentium in molestiae--}}
 {{--                temporibus explicabo velit sed aliquid! Tempore temporibus laborum--}}
 {{--                veniam perspiciatis debitis.--}}
 {{--            </p>--}}
-{{--        </div>--}}
+        </div>
     </header>
     <main class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 items-center min-h-screen">
         {{ $slot }}

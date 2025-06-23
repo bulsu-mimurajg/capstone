@@ -11,7 +11,9 @@
 <body>
 <header class="flex justify-between items-center px-10 py-5 border-b-[2px]">
     <div>
-        <span class="font-bold text-[20px] text-[#FF9D41]">InternConnect</span>
+        <a href="/">
+            <span class="font-bold text-[20px] text-[#FF9D41]">InternConnect</span>
+        </a>
     </div>
 
     <nav class="space-x-7 text-[#666666]">
