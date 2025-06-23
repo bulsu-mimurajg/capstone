@@ -29,11 +29,11 @@
                 </button>
 
                 <div class="mt-6 text-center text-[13px] text-[#707070] hover:text-[#FF9D41] hover:underline">
-                    <a href="forgotPassword.php">Forgot Password?</a>
+                    <a href="{{ route('password.request') }}">Forgot Password?</a>
                 </div>
                 <p class="text-center text-[13px] text-[#707070]">
                     Don't have an account yet?
-                    <a class="text-[#FF9D41] hover:underline" href="createAccount.php">Create here</a>
+                    <a class="text-[#FF9D41] hover:underline" href="{{ route('register') }}">Create here</a>
                 </p>
 
             </form>

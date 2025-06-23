@@ -1,16 +1,11 @@
 <?php
 
-use App\Http\Controllers\SessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\SessionController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'guest');
 
-Route::middleware('guest')->group(function () {
-    Route::view('/about', 'about');
-    Route::view('/contact', 'contact');
+require __DIR__.'/auth.php';
 
-    Route::get('/login', [SessionController::class, 'create']);
-});
-
-//Auth
 
