@@ -14,6 +14,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('category_weights', function (Blueprint $table) {
+            $table->id();
             $table->foreignIdFor(HTE::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(Subcategory::class)->constrained()->cascadeOnDelete();
             $table->unsignedInteger('weight');

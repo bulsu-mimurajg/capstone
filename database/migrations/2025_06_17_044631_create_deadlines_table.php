@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('deadlines', function (Blueprint $table) {
-            $table->id('deadline_id');
+            $table->id();
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->enum('status', ['active', 'expired'])->default('active');

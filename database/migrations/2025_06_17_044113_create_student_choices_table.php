@@ -14,7 +14,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('student_choices', function (Blueprint $table) {
-            $table->id('choice_id');
+            $table->id();
             $table->foreignIdFor(Student::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(Internship::class)->constrained()->cascadeOnDelete();
             $table->unsignedInteger('choice_rank');

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->id('question_id');
+            $table->id();
             $table->foreignIdFor(\App\Models\Competency::class);
             $table->text('question_text');
             $table->boolean('is_active')->default(true);

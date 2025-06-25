@@ -14,12 +14,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('student_matches', function (Blueprint $table) {
+            $table->id();
             $table->foreignIdFor(Student::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(Internship::class)->constrained()->cascadeOnDelete();
             $table->unsignedInteger('rank');
             $table->decimal('compatibility_score', 5, 2);
 
-            $table->primary(['student_id', 'internship_id']);
         });
     }
 
