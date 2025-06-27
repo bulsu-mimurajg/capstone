@@ -15,23 +15,21 @@ class SessionController extends Controller
 
     public function store()
     {
-//        $attributes = request()->validate([
-//            'username' => ['required'],
-//            'email' => ['required', 'email', 'max:254'],
-//            'password' => ['required'],
-//        ]);
-//
-//
-//
-//        if(! Auth::attempt($attributes)){
-//            throw ValidationException::withMessages([
-//                'email' => ['The provided credentials are incorrect.'],
-//            ]);
-//        }
-//
-//        request()->session()->regenerate();
-//
-//        return redirect('/jobs');
+        $attributes = request()->validate([
+            'username' => ['required'],
+            'password' => ['required'],
+        ]);
+
+        if(! Auth::attempt($attributes)){
+            throw ValidationException::withMessages([
+                'username' => ['The provided credentials are incorrect.'],
+            ]);
+        }
+
+        request()->session()->regenerate();
+
+        return redirect('/dashboard');
+//        return redirect()->intended(route('dashboard', absolute: false));
     }
 
     public function destroy()

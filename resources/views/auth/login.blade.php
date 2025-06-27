@@ -13,11 +13,12 @@
 
     <div class="bg-[#ececec] flex justify-center items-start pt-[90px] h-full ">
         <div class="max-w-md w-full bg-white py-8 md:py-10 px-12 md:px-16 rounded-md shadow-md">
-            <form action="">
+            <form method="POST" action="/login">
+                @csrf
                 <h1 class="font-bold flex justify-center items-center text-[40px] text-[#666666] mb-[25px]">Login</h1>
                 <div class="mb-6">
                     <input class="w-full px-4 py-[3px] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                           type="text" name="username" id="username" placeholder="Username" required>
+                           type="text" name="username" id=" username" placeholder="Username" required>
                 </div>
                 <div>
                     <input class="w-full px-4 py-[3px] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"

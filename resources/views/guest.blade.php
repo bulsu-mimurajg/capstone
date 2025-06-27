@@ -20,16 +20,6 @@
         <x-nav-link href="/about">About Us</x-nav-link>
         <x-nav-link href="/contact">Contact Us</x-nav-link>
         <x-nav-link href="{{ route('login') }}">Login</x-nav-link>
-        @auth
-            <form method="post" action="/logout">
-                @csrf
-                @method('DELETE')
-
-                <button class="w-full mt-8 bg-[#FF9D41] text-white font-semibold py-[3px] rounded-md hover:bg-[#ffa856]"
-                        type="submit">Logout
-                </button>
-            </form>
-        @endauth
     </nav>
 </header>
 
